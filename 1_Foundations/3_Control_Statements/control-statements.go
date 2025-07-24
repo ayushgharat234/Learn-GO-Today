@@ -9,71 +9,79 @@ func main() {
 
 	age := 17 // A sample variable for age
 	if age > 18 {
-		// This block executes if the condition (age > 18) is true
 		fmt.Println("You are an Adult.")
 	} else if age == 18 {
-		// This block executes if the condition (age == 18) is true
 		fmt.Println("You just turned 18!")
 	} else {
-		// This block executes if none of the above conditions are true
 		fmt.Println("You are a Minor.")
 	}
 
-	// Using a boolean expression directly in the if condition
+	// Real-world example: Access control
+	userLoggedIn := true
+	userRole := "admin"
+	if userLoggedIn && userRole == "admin" {
+		fmt.Println("Welcome Admin! Access granted.")
+	} else {
+		fmt.Println("Access Denied.")
+	}
+
 	isWeekend := false
 	if isWeekend {
 		fmt.Println("Relax, it's the weekend!")
 	} else {
 		fmt.Println("Time to work!")
 	}
-	fmt.Println() // Adding a blank line for output readability
+	fmt.Println()
 
 	// SECTION 2: Loops in Go
 	fmt.Println("SECTION 2: Loops")
 
-	// Basic for loop
 	fmt.Println("Basic for loop:")
 	for i := 0; i < 5; i++ {
 		fmt.Printf("Iteration %d\n", i)
 	}
 	fmt.Println()
 
-	// For loop as a while loop
 	fmt.Println("Using 'for' as a while loop:")
 	counter := 3
 	for counter > 0 {
 		fmt.Printf("Counter: %d\n", counter)
-		counter-- // Decrement the counter
+		counter--
 	}
 	fmt.Println()
 
-	// Infinite loop with a break statement
 	fmt.Println("Infinite loop with break:")
 	count := 0
 	for {
 		if count == 3 {
 			fmt.Println("Breaking out of the loop!")
-			break // Exits the loop when count == 3
+			break
 		}
 		fmt.Printf("Count: %d\n", count)
 		count++
 	}
 	fmt.Println()
 
-	// Using continue to skip an iteration
 	fmt.Println("Loop with continue statement:")
 	for i := 1; i <= 5; i++ {
 		if i%2 == 0 {
-			continue // Skips the iteration for even numbers
+			continue
 		}
 		fmt.Printf("Odd Number: %d\n", i)
 	}
 	fmt.Println()
 
+	// Real-world loop example: Sum of first N numbers
+	sum := 0
+	for i := 1; i <= 100; i++ {
+		sum += i
+	}
+	fmt.Printf("Sum of 1 to 100: %d\n\n", sum)
+
 	// SECTION 3: Switch Statement
 	fmt.Println("SECTION 3: Switch Statement")
 
-	day := 3 // A variable representing the day of the week
+	day := 3
 	switch day {
 	case 1:
 		fmt.Println("Monday")
@@ -82,14 +90,11 @@ func main() {
 	case 3:
 		fmt.Println("Wednesday")
 	case 4, 5:
-		// Grouping multiple cases together
 		fmt.Println("Thursday or Friday")
 	default:
-		// Default case for unmatched conditions
 		fmt.Println("Weekend")
 	}
 
-	// Switch with no condition (acting as an if-else ladder)
 	fmt.Println("Switch with no condition:")
 	ageCategory := 25
 	switch {
@@ -102,12 +107,11 @@ func main() {
 	}
 	fmt.Println()
 
-	// Fallthrough behavior
 	fmt.Println("Switch with fallthrough:")
 	switch level := 2; level {
 	case 1:
 		fmt.Println("Level 1")
-		fallthrough // Forces execution of the next case
+		fallthrough
 	case 2:
 		fmt.Println("Level 2")
 	case 3:
@@ -117,7 +121,6 @@ func main() {
 	}
 	fmt.Println()
 
-	// Switch with a variable declaration in the statement
 	fmt.Println("Switch with variable declaration:")
 	switch num := 15; {
 	case num%2 == 0:

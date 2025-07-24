@@ -86,23 +86,27 @@ func main() {
 	fmt.Println("SECTION 1: Basic Function")
 	message := greet("Alice")
 	fmt.Println(message)
+	// Practice: Try calling greet() with your own name.
 	fmt.Println()
 
 	// SECTION 2: Using a Function with Multiple Return Values
 	fmt.Println("SECTION 2: Function with Multiple Return Values")
 	sum, diff := calculate(10, 5)
 	fmt.Printf("Sum: %d, Difference: %d\n", sum, diff)
+	// Practice: Create a new function that returns product and quotient of two numbers.
 	fmt.Println()
 
 	// SECTION 3: Variadic Function
 	fmt.Println("SECTION 3: Variadic Function")
 	total := sumAll(1, 2, 3, 4, 5)
 	fmt.Printf("Sum of numbers: %d\n", total)
+	// Practice: Modify sumAll to return the average as well.
 	fmt.Println()
 
 	// SECTION 4: Anonymous Function
 	fmt.Println("SECTION 4: Anonymous Function")
 	demonstrateAnonymousFunction()
+	// Practice: Write an anonymous function that returns square of a number.
 	fmt.Println()
 
 	// SECTION 5: Closure
@@ -110,17 +114,20 @@ func main() {
 	increment := showClosure()
 	increment()
 	increment()
+	// Practice: Try creating a closure that accumulates sum.
 	fmt.Println()
 
 	// SECTION 6: Recursive Function
 	fmt.Println("SECTION 6: Recursive Function")
 	fmt.Printf("Factorial of 5: %d\n", factorial(5))
+	// Practice: Write a recursive function to compute Fibonacci numbers.
 	fmt.Println()
 
 	// SECTION 7: Function Types
 	fmt.Println("SECTION 7: Function Types")
 	demonstrateFunctionType(add, 10, 5)
 	demonstrateFunctionType(multiply, 10, 5)
+	// Practice: Create a new operation type function that divides two numbers.
 	fmt.Println()
 
 	// SECTION 8: Higher-Order Functions
@@ -129,4 +136,5 @@ func main() {
 		return x * y
 	})
 	fmt.Printf("Result of higher-order function: %d\n", result)
+	// Practice: Use higherOrder with subtraction logic.
 }

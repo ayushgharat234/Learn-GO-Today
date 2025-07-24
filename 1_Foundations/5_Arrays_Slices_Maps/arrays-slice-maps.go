@@ -23,6 +23,7 @@ func main() {
 	for i, value := range initializedArray {
 		fmt.Printf("Index: %d, Value: %d\n", i, value)
 	}
+	// Practice: Create an array of strings and print each character in reverse order.
 	fmt.Println()
 
 	// SECTION 2: Slices
@@ -51,6 +52,7 @@ func main() {
 	newSlice := make([]int, len(slice))
 	copy(newSlice, slice) // Copy contents of one slice to another.
 	fmt.Println("Copied Slice:", newSlice)
+	// Practice: Use append and copy to merge two slices.
 	fmt.Println()
 
 	// SECTION 3: Maps
@@ -88,6 +90,7 @@ func main() {
 		"GroupB": {"Charlie": 35},
 	}
 	fmt.Println("Nested Map:", nestedMap)
+	// Practice: Create a map of countries with nested maps of cities and populations.
 	fmt.Println()
 
 	// SECTION 4: Advanced Slice Operations
@@ -106,6 +109,7 @@ func main() {
 	fmt.Printf("Before appending beyond capacity: %v (len: %d, cap: %d)\n", extendedSlice, len(extendedSlice), cap(extendedSlice))
 	extendedSlice = append(extendedSlice, 30, 40) // Appends beyond initial capacity.
 	fmt.Printf("After appending beyond capacity: %v (len: %d, cap: %d)\n", extendedSlice, len(extendedSlice), cap(extendedSlice))
+	// Practice: Create a slice, append till it doubles its capacity and print it at each step.
 	fmt.Println()
 
 	// SECTION 5: Comparison Between Arrays, Slices, and Maps
@@ -113,4 +117,6 @@ func main() {
 	fmt.Println("1. Arrays are fixed in size, while slices are dynamic.")
 	fmt.Println("2. Arrays cannot be resized, but slices can grow/shrink.")
 	fmt.Println("3. Maps are unordered collections of key-value pairs, while arrays/slices are ordered.")
+	fmt.Println("4. Slices and maps are reference types; arrays are value types.")
+	// Practice: Summarize pros and cons of each data structure in your own words.
 }
